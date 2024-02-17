@@ -1,0 +1,272 @@
+html {
+    font-size: 14px;
+}
+
+
+
+@media (min-width: 768px) {
+
+    html {
+        font-size: 16px;
+    }
+}
+
+
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+
+
+body {
+    margin-bottom: 60px;
+}
+
+
+
+
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Needed for pseudo-elements */
+
+    overflow: hidden; /* Ensures pseudo-elements fit within the border radius */
+}
+
+
+
+    .img::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        right: -50%;
+        bottom: -50%;
+        background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.3) 60%, rgba(0,0,0,0.3) 100%);
+        z-index: 2;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+        border-radius: 10px; /* Match the image's border-radius */
+    }
+
+
+
+    .img:hover::before {
+        opacity: 1; /* Show the gradient overlay on hover */
+    }
+
+
+
+    .img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+
+
+    .img::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 10%;
+        background: linear-gradient(to top, rgba(255,255,255,0.5), transparent);
+        z-index: 1; /* Ensure it's below the image content */
+
+        border-radius: 0 0 10px 10px; /* Match the image's bottom border-radius */
+    }
+
+}
+
+restofit {
+    color: #258cfb;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+
+.restofit:hover {
+    text-decoration: underline;
+    color: #106ba3;
+}
+
+
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+.form-general {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+.form-label {
+    font-size: 16px;
+    color: #555;
+}
+
+
+
+.form-control {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+
+
+.form-control:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+
+
+.btn-primary {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+
+
+.p-general {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+.btn-secondary {
+    background-color: #f4f4f4;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+
+
+    .btn-secondary:hover {
+        background-color: #e2e2e2;
+    }
+
+
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+input[type="text"] {
+    display: block;
+    width: calc(100% - 16px);
+}
+
+
+
+button[type="submit"] {
+    background-color: hotpink;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+
+
+    button[type="submit"]:hover {
+        background-color: #106ba3;
+    }
